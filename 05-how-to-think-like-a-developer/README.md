@@ -12,7 +12,13 @@ As a user...
 I should be able to...
 So that...
 
-
+As a user, I should be able to add a picture (of their face!)
+As a user, I should be able to sort my contacts
+As a user, I should be able to personalize each contact
+As a user, I should be able to track the contact history
+As a user, I should be able to share the contacts
+As a user, I should be able to mark contacts as favourites
+As a user, I should be able to back up my contacts
 
 
 
@@ -23,10 +29,19 @@ So that...
 ## Prioritize
 
 - MUST HAVE
+As a user, I should be able to create a contact
+As a user, I should be able to store their phone number and email
+As a user, I should be able to search through the contacts
+As a user, I should be able to update a contact
+As a user, I should be able to delete a contact
+As a user, I should be able to display all my contacts
 
 - SHOULD HAVE
+As a user, I should be able to filter the contacts
 
 - COULD HAVE
+As a user, I should be able to call the contact
+As a user, I should be able to group the contacts
 
 - WON'T HAVE
 
