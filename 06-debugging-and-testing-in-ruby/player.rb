@@ -1,7 +1,7 @@
 class Player
   attr_accessor :name, :points, :x, :y
 
-  def initalize(x, y)
+  def initialize(x, y)
     @x = x
     @y = y
     @points = 0

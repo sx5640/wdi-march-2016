@@ -1,11 +1,21 @@
+require_relative 'player.rb'
+require 'pry-byebug'
+
 class Game
   attr_reader :width, :height
   attr_accessor :players
 
-  def initialize(number_of_players)
+  def initialize(number_of_players, width, height)
+    @width = width
+    @height = height
+    @players = []
+
     number_of_players.times do
-      @players << Player.new((0..@width).to_a.sample, (0..@height).to_a.sample)
+      player_x = (0..@width).to_a.sample
+      player_y = (0..@height).to_a.sample
+      @players << Player.new(player_x, player_y)
     end
+
   end
 
   def self.start
@@ -13,8 +23,8 @@ class Game
     print "How many people are adventuring? "
     number_of_players = gets.chomp.to_i
 
-    game = new(number_of_players)
-    g.turn
+    game = new(number_of_players, 20, 20)
+    game.turn
   end
 
   def turn
@@ -29,9 +39,9 @@ class Game
       end
 
       if new_y >= 0 && new_y < height
-        player.y += new_y 
+        player.y += new_y
       end
-
+    end
   end
 end
 
