@@ -1,0 +1,15 @@
+<html lang=en>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Title Goes Here</title>
+  </head>
+  <body>
+    <h2>Here is your todo list</h2>
+    <%= @result %>
+    <ul>
+      <% @todos.each do |todo| %>
+        <li><%= todo %></li>
+      <% end %>
+    </ul>
+  </body>
+</html>
