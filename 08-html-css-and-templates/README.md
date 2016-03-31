@@ -11,9 +11,13 @@
   * Tags, Elements, and Attributes
 * Explore how we can efficiently structure our templates to avoid redundancy
 * Layouts in Sinatra
+
+* BREAK
+
 * CSS Fundamentals (slides)
   * Properties
   * Selectors
   * Cascade & Inheritance
   * Box Model
 * Where we place CSS in Sinatra
+* Introduce next assignment
