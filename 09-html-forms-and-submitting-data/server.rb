@@ -11,7 +11,8 @@ get '/films' do
 end
 
 post '/films' do
-  "POST request: #{params}"
+  Film.create(params)
+  redirect to '/'
 end
 
 put '/films' do
