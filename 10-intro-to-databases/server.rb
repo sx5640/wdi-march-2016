@@ -19,6 +19,11 @@ put '/films' do
   "PUT request: #{params}"
 end
 
-delete '/films' do
+delete '/films/:id' do
+  film = Film.find(params[:id])
+  film.destroy
+
+  redirect to '/'
+
   "DELETE request: #{params}"
 end
