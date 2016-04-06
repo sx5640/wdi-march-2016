@@ -3,7 +3,7 @@
 Today we take a first look at Rails.
 
 ## Agenda
-After this lesson, you will know:
+After this lesson, you will have seen:
 
   * Rails
   * MVC
