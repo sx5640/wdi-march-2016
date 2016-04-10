@@ -1,18 +1,17 @@
 # SQL and ActiveRecord
 
-### Review
+## Agenda
+1. Database review
+2. ActiveRecord Basics
+3. Migrations
+4. ActiveRecord Query Interface
+
+## Review
 * What is a database?
 * Why do we need databases?
 
-### Databases & SQL
+## Databases & SQL
 * Components of a database
-* SQL examples
-
-### Active Record
-* ActiveRecord
-* ActiveRecord Query Interface
-* Scopes
-
 
 ## Components of a database
 
@@ -29,3 +28,8 @@
 * Foreign key:
 Allows you to associate to another table
 `objectname_id`
+
+
+## ActiveRecord
+* ActiveRecord
+* ActiveRecord Query Interface
