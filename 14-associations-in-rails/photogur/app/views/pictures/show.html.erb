@@ -4,3 +4,10 @@
   <p> <%= @picture.description %> </p>
   <%= image_tag @picture.url %>
 </section>
+
+<h2> Comments </h2>
+
+<% @comments.each do |c| %>
+  <p><%= c.author %></p>
+  <p><%= c.message %></p>
+<% end %>
