@@ -1,2 +1,34 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<h1>Log in</h1>
+
+<%# Using the form_for syntax also works, which allows you to eventually refactor it into an ActiveModel with validations! %>
+<%# <%= form_for :session, url: sessions_path do |f| %>
+<%#
+<%#   <div class='field'>
+<%#     <%= f.label :email %>
+<%#     <%= f.email_field :email %>
+<%#   </div>
+<%#
+<%#   <div class='field'>
+<%#     <%= f.label :password %>
+<%#     <%= f.password_field :password %>
+<%#   </div>
+<%#
+<%#   <%= f.submit 'Log in' %>
+<%#
+<%# <% end %>
+
+<%= form_tag sessions_path do %>
+
+  <div class='field'>
+    <%= label_tag :email %>
+    <%= email_field_tag :email %>
+  </div>
+
+  <div class='field'>
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+  </div>
+
+  <%= submit_tag 'Log in' %>
+
+<% end %>
