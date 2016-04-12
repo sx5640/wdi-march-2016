@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  get 'users/new'
 
-  get 'users/create'
+  root 'users#new'
+
+  resource :users, only: %i(new create)
+  resource :sessions, only: %i(new create destroy)
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
