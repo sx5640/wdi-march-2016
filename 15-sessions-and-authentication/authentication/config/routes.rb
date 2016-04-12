@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 
   root 'users#new'
 
+  get    'login'  => 'sessions#new'
+  delete 'logout' => 'sessions#destroy'
+
   resource :users, only: %i(new create)
   resource :sessions, only: %i(new create destroy)
 
