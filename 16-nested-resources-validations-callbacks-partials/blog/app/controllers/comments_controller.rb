@@ -1,7 +1,13 @@
 class CommentsController < ApplicationController
+  before_action :ensure_logged_in
+
   def create
     @article = Article.find(params[:article_id])
     @comment = @article.comments.build(comment_params)
+
+    # @comment = Comment.new
+    # @comment.article = @article
+
     @comment.user = current_user
 
     if @comment.save

@@ -3,3 +3,22 @@
 <p><%= @article.body %></p>
 
 <p>Created at: <%= @article.created_at %></p>
+
+<% if @article.comments.any? %>
+  <div class="comment-list">
+    <h2>Comments</h2>
+    <ul>
+      <%= render @article.comments %>
+    </ul>
+  </div>
+<% end %>
+
+<% if current_user %>
+  <%= form_for [@article, @comment] do |f| %>
+    <div class="field">
+      <%= f.label :body %>
+      <%= f.text_area :body %>
+    </div>
+    <%= f.submit %>
+  <% end %>
+<% end %>
