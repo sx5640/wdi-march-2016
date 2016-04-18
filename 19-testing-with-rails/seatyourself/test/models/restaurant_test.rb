@@ -3,15 +3,19 @@ require 'test_helper'
 class RestaurantTest < ActiveSupport::TestCase
 
   setup do
-    @small = FactoryGirl.create :small_restaurant
-    @large = FactoryGirl.create :large_restaurant
+    @restaurant = FactoryGirl.create :restaurant
   end
 
-  test 'restaurants exist' do
-    assert_equal 2, Restaurant.all.size
+  test 'restaurant is available' do
+    assert @restaurant.available?(10)
   end
 
-  test 'small restaurant has small capacity' do
-    assert @small.capacity < 25
+  test 'restaurant is not available' do
+    assert_not @restaurant.available?(200)
   end
+
+  test 'restaurant is not available for a party size of 0' do
+    assert_not @restaurant.available?(0)
+  end
+
 end

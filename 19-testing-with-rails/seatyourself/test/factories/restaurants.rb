@@ -1,7 +1,7 @@
 FactoryGirl.define do
 
   factory :restaurant do
-    capacity { rand(5..100)}
+    capacity 100
   end
 
   factory :small_restaurant, class: 'Restaurant' do
