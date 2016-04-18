@@ -18,4 +18,14 @@ class RestaurantTest < ActiveSupport::TestCase
     assert_not @restaurant.available?(0)
   end
 
+  test 'restaurant is available given a reservation' do
+    FactoryGirl.create :reservation, party_size: 10, restaurant: @restaurant
+    assert @restaurant.available?(80)
+  end
+
+  test 'restaurant is not available given a reservation' do
+    FactoryGirl.create :reservation, party_size: 99, restaurant: @restaurant
+    assert_not @restaurant.available?(10)
+  end
+
 end
