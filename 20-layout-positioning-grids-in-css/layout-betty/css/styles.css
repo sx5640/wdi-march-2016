@@ -10,7 +10,7 @@
 *,
 *:after,
 *:before {
-
+  box-sizing: border-box;
 }
 
 
@@ -52,6 +52,35 @@ section h2 {
   Intro to floats. Moving the title to the left and the list items to the right.
 */
 
+.nav-bar {
+  background-color: #333;
+  color: white;
+  overflow: hidden;
+  height: 60px;
+  padding: 0 30px;
+}
+
+.title {
+  margin: 0;
+  float: left;
+  line-height: 60px;
+}
+
+
+.nav-list {
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  list-style-type: none;
+  display: inline;
+  line-height: 60px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
 
 /*
   == STYLING THE LAYOUT ==
@@ -62,6 +91,51 @@ section h2 {
     - Main on the right side, taking up 65% width
     - Footer on the bottom, spanning all the way across the page
 */
+
+aside {
+  width: 35%;
+  background-color: #ccc;
+  float: left;
+  height: 100%;
+  padding: 30px;
+}
+
+main {
+  width: 65%;
+  float: left;
+  height: 100%;
+  padding: 30px;
+}
+
+.container {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+.spidey-pic {
+  width: 100%;
+}
+
+.img-container {
+  width: 100%;
+  background-color: white;
+  border-radius: 50%;
+  border: 5px solid #333;
+  margin-bottom: 30px;
+}
+
+.tagline {
+  background-color: rgb(34, 167, 240);
+  padding: 15px;
+}
 
 
 /*
