@@ -11,3 +11,9 @@ Creating functional layouts from scratch with HTML & CSS can be tricky. In this 
   * The `position` property
 
 Time permitting, we'll also take an introductory look at Sass and see why it's included in Rails by default.
+
+## Display
+
+## Float
+
+## Position
