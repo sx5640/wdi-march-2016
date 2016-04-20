@@ -53,3 +53,5 @@ switch (fruit) {
       alert("DEFAULT");
       break;
 }
+
+var ternaryOperator = ( fruit !== "Banana" ) ? "DISLIKE" : "LIKE";

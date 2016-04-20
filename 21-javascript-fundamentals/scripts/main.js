@@ -53,7 +53,7 @@ function forLoop() {
 
 // While Loop
 function whileLoop() {
-  var counter = 200;
+  var counter = 90;
   while (counter < 100) {
     counter++;
     console.log('Counter:', counter);
