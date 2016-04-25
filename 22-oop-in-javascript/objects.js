@@ -11,7 +11,7 @@ var hailCaesar = {
       character: "Some Lady"
     }
   ]
-}
+};
 
 function Film(title, director) {
   this.title = title;
