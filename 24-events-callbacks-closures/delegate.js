@@ -23,4 +23,9 @@ $(document).ready(function() {
 
       console.log('link was clicked');
   });
+
+  $('#container').on('click', '.circle', function() {
+    // this === the DOM element on which the event occurred
+    $(this).remove();
+  });
 });

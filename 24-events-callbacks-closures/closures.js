@@ -2,7 +2,7 @@ function sum(x, y) {
   return x + y;
 }
 
-function name() {
+function closure() {
   var firstName = "Mina";
 
   function displayName() {
@@ -12,30 +12,21 @@ function name() {
   return displayName;
 }
 
-name() // => displayName function
-
-function makeAdder(x) {
-  return function(y) {
-    return x + y;
-  }
-}
-
-function Person(firstName, lastName) {
-  this.firstName = firstName;
-  this.lastName = lastName;
-
-  function fullName() {
-    return firstName + ' ' + lastName;
-  }
-}
-
-mina = new Person("Mina", "Mikhail");
-
-
-
-
-
-
-
-
-
+// name() // => displayName function
+//
+// function makeAdder(x) {
+//   return function(y) {
+//     return x + y;
+//   }
+// }
+//
+// function Person(firstName, lastName) {
+//   this.firstName = firstName;
+//   this.lastName = lastName;
+//
+//   function fullName() {
+//     return firstName + ' ' + lastName;
+//   }
+// }
+//
+// mina = new Person("Mina", "Mikhail");
