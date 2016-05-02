@@ -5,5 +5,10 @@ class RobotsController < ApplicationController
 
   def show
     @robot = Robot.find(params[:id])
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @robot }
+    end
   end
 end

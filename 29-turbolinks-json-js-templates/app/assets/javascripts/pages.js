@@ -1,9 +1,9 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
 
-// Turbolinks.enableProgressBar();
+Turbolinks.enableProgressBar();
 
-$(document).on('ready', function() {
+$(document).on('ready page:load', function() {
   function createBoxes(numBoxes, label) {
     var boxLabel = label || 'BOX',
         box = $('<div class="box"></div>').html(boxLabel),
