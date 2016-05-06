@@ -6,8 +6,135 @@
 
 html {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-size: 50px;*/
 }
 
 body {
   margin: 0;
 }
+
+.pk-title {
+  font-size: 30px;
+  /* target ÷ context = result */
+  /* 30px ÷ 16px = 1.875rem */
+
+  font-size: 1.875rem;
+  margin: 0;
+  padding: 1rem;
+}
+
+.pk-banner-lg {
+  display: none;
+}
+
+.pk-header {
+  background-color: #ccc;
+}
+
+.pk-title-alt {
+  display: none;
+}
+
+.pk-banner {
+  width: 100%;
+}
+
+.pk-container {
+  max-width: 45rem;
+
+}
+
+/* When the browser is 450 or wider */
+@media screen and (min-width: 28.125rem) {
+  .pk-main {
+    overflow: hidden;
+  }
+
+  .pk-description {
+    float: left;
+    border: 5px solid yellow;
+    width: 50%;
+    height: 21.875rem;
+  }
+}
+
+/* When the brower is 575px or wider ---> */
+@media screen and (min-width: 35.9375rem) {
+
+  .pk-description {
+    width: 33.333333%;
+  }
+
+}
+
+/* When the browser is 600px or wider --> */
+@media screen and (min-width: 37.5rem) {
+  .pk-banner-lg {
+    display: block;
+  }
+
+  .pk-banner-sm {
+    display: none;
+  }
+
+  .pk-title-alt {
+    display: inline-block;
+  }
+}
+
+
+/* 600px ÷ 16px = 37.5rem */
+/* 719px ÷ 16px = 44.9375rem */
+/* These rules will ONLY apply when the screen is 600px or wider */
+@media screen and (min-width: 37.5rem) and (max-width: 44.9375rem) {
+  body {
+    background-color: blue;
+  }
+}
+
+/* 720px ÷ 16px = 45rem */
+/* These rules will ONLY apply when the screen is 720px or wider */
+@media screen and (min-width: 45rem ) {
+  body {
+    background-color: tomato;
+  }
+
+  .pk-container {
+    margin-left: auto;
+    margin-right: auto;
+
+    margin: 0 auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* How em's work */
+/*.big-parent {
+  font-size: 16px;
+}*/
+
+/*.little-parent {*/
+  /* target ÷ context = result */
+  /* 16*2 = 32px */
+  /*font-size: 2em;
+}*/
+
+/*.child {
+  32px * 3
+  font-size: 3em;
+}*/
