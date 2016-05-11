@@ -6,6 +6,9 @@ class Restaurant < ActiveRecord::Base
   belongs_to :category # not actually being used yet
   has_many :reservations
 
+  geocoded_by :address
+  after_validation :geocode, if: :address_changed?
+
   # These methods return the opening and closing hours for a restaurant
   # A possible new feature would be to make these additional columns so that each restaurant could have its own hours
   def opening_hour
@@ -76,6 +79,10 @@ class Restaurant < ActiveRecord::Base
     reserved = self.reservations.where(:begin_time, begin_time).sum(:people)
     # now add in the number of people in the requested reservation and see if they fit
     self.capacity - (reserved + people) >= 0
+  end
+
+  def display_distance_to(other_restaurant)
+    self.distance_to(other_restaurant, :km).round(3)
   end
 
 end

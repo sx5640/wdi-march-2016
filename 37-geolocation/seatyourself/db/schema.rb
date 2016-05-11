@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141209163101) do
+ActiveRecord::Schema.define(version: 20160511141538) do
 
   create_table "authentications", force: :cascade do |t|
     t.integer  "user_id",                null: false
@@ -50,6 +50,8 @@ ActiveRecord::Schema.define(version: 20141209163101) do
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
     t.integer  "capacity",    default: 100
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   add_index "restaurants", ["category_id"], name: "index_restaurants_on_category_id"

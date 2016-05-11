@@ -33,3 +33,14 @@
     <%= f.submit %>
   <% end %>
 <% end %>
+
+<h2>Nearby Restaurants</h2>
+<ol>
+  <% @nearby_restaurants.each do |r| %>
+    <li>
+      <p><%= r.name %></p>
+      <p><%= r.address %></p>
+      <p><%= r.display_distance_to(@restaurant) %>  kms aways</p>
+    </li>
+  <% end %>
+</ol>
