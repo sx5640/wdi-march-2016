@@ -1,5 +1,7 @@
 <h2>Please sign in</h2>
 
+<%= link_to 'Login with Github', auth_at_provider_path(provider: :github) %>
+
 <%= form_tag '/sessions' do %>
 
   <div>

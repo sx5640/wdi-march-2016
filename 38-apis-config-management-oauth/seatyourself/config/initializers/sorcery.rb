@@ -76,7 +76,7 @@ Rails.application.config.sorcery.configure do |config|
   # What providers are supported by this app, i.e. [:twitter, :facebook, :github, :linkedin, :xing, :google, :liveid, :salesforce] .
   # Default: `[]`
   #
-  # config.external_providers =
+  config.external_providers = [:github]
 
 
   # You can change it by your local ca_file. i.e. '/etc/pki/tls/certs/ca-bundle.crt'
@@ -122,12 +122,12 @@ Rails.application.config.sorcery.configure do |config|
   # config.facebook.access_permissions = ["email", "publish_actions"]
   # config.facebook.display = "page"
   # config.facebook.api_version = "v2.2"
-  #
-  # config.github.key = ""
-  # config.github.secret = ""
-  # config.github.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=github"
-  # config.github.user_info_mapping = {:email => "name"}
-  #
+
+  config.github.key = Figaro.env.github_client_id
+  config.github.secret = Figaro.env.github_client_secret
+  config.github.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=github"
+  config.github.user_info_mapping = {:email => "name"}
+
   # config.google.key = ""
   # config.google.secret = ""
   # config.google.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=google"
@@ -436,7 +436,7 @@ Rails.application.config.sorcery.configure do |config|
     # Class which holds the various external provider data for this user.
     # Default: `nil`
     #
-    # user.authentications_class =
+    user.authentications_class = Authentication
 
 
     # User's identifier in authentications class.

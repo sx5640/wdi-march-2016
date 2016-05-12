@@ -4,5 +4,8 @@ class User < ActiveRecord::Base
   validates :name, :email, :presence => true
   validates :email, :uniqueness => true
 
+  has_many :authentications, dependent: :destroy
   has_many :reservations
+
+  accepts_nested_attributes_for :authentications
 end
