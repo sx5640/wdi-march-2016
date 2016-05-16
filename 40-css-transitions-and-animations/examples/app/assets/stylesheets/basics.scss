@@ -1,17 +1,65 @@
 /*****************************************************************************
   transitions
 ******************************************************************************/
+@keyframes wobble {
+  from {
+    transform: none;
+  }
+
+  15% {
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+
+  30% {
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+
+  45% {
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+
+  60% {
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+
+  75% {
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
 .shape {
   position: absolute;
   width: 100px;
   height: 100px;
   cursor: pointer;
+
+  // transition-property: all;
+  // transition-duration: 1s;
+  // transition-timing-function: linear;
+  // transition-delay: 0s;
+
+  transition: all 1s linear 0s;
 }
 
 .shape-square {
   background-color: #FF6347; // tomato (obviously!)
   top: 10%;
   left: 10%;
+
+  &.is-active {
+    top: 80%;
+    left: 80%;
+    background-color: orange;
+  }
+
+  animation-name: wobble;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: 5;
 }
 
 .shape-circle {
@@ -19,4 +67,12 @@
   background-color: #6495ED; // cornflowerblue
   bottom: 10%;
   left: 10%;
+
+  transition: bottom 0.25s ease-in-out, left 0.5s linear 0.25s, border-radius 0.25s ease 0.75s;
+
+  &.is-active {
+    bottom: 50%;
+    left: 50%;
+    border-radius: 0;
+  }
 }

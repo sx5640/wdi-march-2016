@@ -44,6 +44,8 @@ body,
   position: absolute;
   display: block;
   content: '';
+
+  transition: all 0.25s $ease-out-back;
 }
 
 #nav-toggle span:before {
@@ -52,4 +54,33 @@ body,
 
 #nav-toggle span:after {
   bottom: -25px;
+}
+
+#nav-toggle.is-open span {
+  background-color: transparent;
+}
+
+#nav-toggle.is-open span:before {
+  top: 0;
+  transform: rotateZ(45deg);
+}
+
+#nav-toggle.is-open span:after {
+  bottom: 0;
+  transform: rotateZ(-45deg);
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -30%;
+  height: 100%;
+  width: 30%;
+  background-color: white;
+
+  transition: left 0.25s $ease-out-sine;
+
+  &.is-open {
+    left: 0;
+  }
 }
