@@ -8,3 +8,14 @@ After this lesson, you'll know:
   * How to approach the Crowdfunder project
   * When you would need to save multiple models from the same form
   * How to set up a multi-model form
+
+
+## Crowdfunder Domain
+
+- Project
+- User
+- Pledge
+- Reward
+- Comments
+- Categories
+- Updates
